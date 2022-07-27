@@ -41,4 +41,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
    menu('.humburger', '.menu', '.menu__close', 'active');
 
+   const presents = document.querySelectorAll('.skills__progress-percent'),
+      linePresent = document.querySelectorAll('.skills__progress-line span');
+
+   presents.forEach((item, idx) => {
+      const present = item.textContent.replace(/\D/g, '')
+      linePresent[idx].style.width = present + '%'
+   })
+
+
+
 })
