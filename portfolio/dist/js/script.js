@@ -43,13 +43,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
    //!Present
 
-   const presents = document.querySelectorAll('.skills__progress-percent'),
-      linePresent = document.querySelectorAll('.skills__progress-line span');
+   function setPresent(selectorPresents, selectorPresentLine) {
+      const presents = document.querySelectorAll(selectorPresents),
+         linePresent = document.querySelectorAll(selectorPresentLine);
 
-   presents.forEach((item, idx) => {
-      const present = item.textContent.replace(/\D/g, '')
-      linePresent[idx].style.width = present + '%'
-   })
+      presents.forEach((item, idx) => {
+         const present = item.textContent.replace(/\D/g, '');
+         linePresent[idx].style.width = present + '%';
+      })
+   }
+
+   setPresent(".skills__progress-percent", '.skills__progress-line span')
+
 
    //!scroll
 
@@ -58,7 +63,7 @@ window.addEventListener('DOMContentLoaded', () => {
    anchors.forEach(item => {
       item.addEventListener('click', function (e) {
          e.preventDefault();
-         let anchorId = this.getAttribute('href')
+         let anchorId = this.getAttribute('href');
          document.querySelector(anchorId).scrollIntoView({
             behavior: 'smooth', block: 'start'
          });

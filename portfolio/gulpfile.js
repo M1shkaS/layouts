@@ -20,7 +20,7 @@ gulp.task('server', function () {
 
 gulp.task('styles', function () {
    return gulp.src("src/sass/**/*.+(scss|sass)")
-      .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+      .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
       .pipe(rename({ suffix: '.min', prefix: '' }))
       .pipe(autoprefixer())
       .pipe(cleanCSS({ compatibility: 'ie8' }))
@@ -29,7 +29,7 @@ gulp.task('styles', function () {
 });
 gulp.task('stylesCSS', function () {
    return gulp.src("src/css/**/*.+(scss|sass|css)")
-      .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+      .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
       .pipe(rename({ suffix: '.min', prefix: '' }))
       .pipe(autoprefixer())
       .pipe(cleanCSS({ compatibility: 'ie8' }))
@@ -49,7 +49,7 @@ gulp.task('watch', function () {
 
 gulp.task('html', function () {
    return gulp.src("src/*.html")
-      .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(htmlmin({ collapseWhitespace: false }))
       .pipe(gulp.dest("dist/"));
 });
 
