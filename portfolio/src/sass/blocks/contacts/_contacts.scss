@@ -1,0 +1,139 @@
+.contacts {
+   padding: 120px 0;
+   background-color: #191919;
+   &__wrapper {
+      display: grid;
+      grid-template-columns: 400px 585px;
+      padding: 0 52px 0 35px;
+      justify-content: space-between;
+   }
+
+   &__photo {
+      img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__subtitle {
+      position: relative;
+      z-index:3;
+      @include before_circle;
+   }
+
+   &__title {
+      font-size: 59px;
+      margin-top: 15px;
+   }
+
+   &__divider {
+      margin-top: 0;
+   }
+
+   &__text {
+      font-size: 18px;
+      line-height: 21px;
+      margin-top: 20px;
+   }
+
+   &__social {
+      margin-top: 20px;
+      display: flex;
+   }
+
+   &__link {
+     text-decoration: none;
+     font-size: 24px;
+     margin-right: 25px;
+     @include hover_social;
+   }
+
+   &__form {
+      margin-top: 30px;
+      display: grid;
+      grid-template: 45px 190px 45px / repeat(2, 280px);
+      justify-content: space-between;
+      row-gap: 23px;
+      label{
+ 
+         position: absolute;
+         z-index: 4;
+         display: block;
+         background-color: #fff;
+         padding:  3px 8px 8px 8px;
+         height: 8px;
+         font-size: 13px;
+         top: -9px;
+         left: 14px;
+         color: #212529;
+         border-radius: 2px;
+
+      }
+   }
+
+
+   &__input {
+      position: relative;
+      input{
+         width: 100%;
+         height: 100%;
+         color: #191919;
+         padding-left: 20px;
+         font-size: 15px;
+         outline:none;
+         border: 2px solid grey;
+         border-radius: 5px 5px / 0 0;
+ 
+         &:focus{
+            color: #212529;
+            background-color: #fff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem grey;
+            
+         }
+      }
+
+   }
+
+   &__textarea {
+      grid-column: 1/3;
+      position: relative;
+      textarea{
+         color: #212529;
+         width: 100%;
+         height: 100%;
+         resize: none;
+         outline:none;
+         border: 2px solid grey;
+         border-radius: 5px;
+         padding: 20px;
+         font-size: 15px;
+         &:focus{
+           
+            background-color: #fff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem grey;
+         }
+      }
+   }
+
+   &__triggers{
+      grid-column: 1/3;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      column-gap: 25px;
+      align-items: center;
+
+      a:hover{
+         color: $main-color;
+      }
+   }
+   &__policy{
+      line-height: 14px;
+      font-size: 12px;
+      input{
+         margin-right: 5px;
+      }
+   }
+}

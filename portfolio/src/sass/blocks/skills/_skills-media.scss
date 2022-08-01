@@ -1,0 +1,66 @@
+@media(max-width:1200px){
+   .skills{
+      padding: 90px 0;
+      &__wrapper{
+         grid-template-columns: repeat(auto-fit,270px);
+         justify-content: space-between;
+         row-gap: 20px;
+      }
+      &__progress{
+         grid-template-columns: repeat(auto-fit,330px);
+         justify-content: space-around;
+         padding-top: 80px;
+      }
+      &__progress-item{
+         margin-bottom: 10px;
+      }
+      &__progress-line{
+         margin-top: 20px;
+      }
+   }
+}
+
+@media(max-width:768px){
+   .skills{
+      padding: 40px 0;
+      &__wrapper{
+         grid-template-columns: repeat(2,260px);
+      }
+
+      &__progress-name{
+         &:before{
+            top: -14px;
+         }
+      }
+      .item-title{
+         font-size: 14px;
+      }
+   }
+
+}
+@media(max-width:576px){
+   .skills{
+      padding: 40px 0;
+      &__wrapper{
+            grid-template-columns: repeat(auto-fit,270px);
+            justify-content: center;
+      }
+      &__progress{
+             grid-template-columns: 300px;
+             padding-top: 40px;
+      }
+      &__progress-name{
+         &:before{
+            width: 36px;
+            height: 36px;
+         }
+      }
+      .item-title{
+         font-size: 16px;
+      }
+      .text{
+         font-size: 13px;
+      }
+  
+   }
+}

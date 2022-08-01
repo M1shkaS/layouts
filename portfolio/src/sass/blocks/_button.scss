@@ -1,0 +1,12 @@
+.button{
+   padding: 12px 25px;
+   font-weight: bold;
+   border-radius: 30px;
+   border: 2px solid  $second-color;
+   background-color: $second-color;
+   transition: .4s;
+   cursor: pointer;
+   &:hover{
+      background-color: #101010;
+   }
+}
