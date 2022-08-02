@@ -55,7 +55,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
    setPresent(".skills__progress-percent", '.skills__progress-line span')
 
-
    //!scroll
 
    let anchors = document.querySelectorAll('nav a[href*="#"]');
@@ -68,6 +67,54 @@ window.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth', block: 'start'
          });
          closeMenu('.menu', 'active');
+      })
+   })
+
+   //!Forms
+   const forms = document.querySelectorAll('form')
+
+   const postData = async function (url, data) {
+      const res = await fetch(url, {
+         method: 'POST',
+         body: data,
+         headers: { 'Content-type': 'application/json' }
+      });
+      return await res.text();
+   }
+
+   forms.forEach(form => {
+      form.addEventListener('submit', event => {
+         event.preventDefault();
+
+         const load = new Toast({
+            title: 'Подождите',
+            text: 'Сообщение отправляется',
+            theme: 'warning',
+            autohide: true,
+            interval: 2000
+         });
+         const formData = new FormData(form);
+         postData('../dist/mailer/smart.php', JSON.stringify(Object.fromEntries(formData.entries())))
+            .then(data => {
+               new Toast({
+                  title: 'Отлично',
+                  text: 'Сообщение отправлено',
+                  theme: 'success',
+                  autohide: true,
+                  interval: 5000
+               });
+            })
+            .catch((error) => {
+               console.log(error);
+               new Toast({
+                  title: 'Ошибка',
+                  text: 'Что-то пошло не так',
+                  theme: 'danger',
+                  autohide: true,
+                  interval: 5000
+               });
+            })
+            .finally(() => form.reset());
       })
    })
 

@@ -89,6 +89,15 @@
       &-text{
          padding-left: 45px;
          margin-top: 10px;
+         span  {
+            color:$main-color;
+         }
+         p{
+            margin-top:5px;
+         }
+         a{
+            text-decoration:underline
+         }
       }
       &-location{
          color: white;
