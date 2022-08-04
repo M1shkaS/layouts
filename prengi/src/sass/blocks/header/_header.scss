@@ -1,0 +1,37 @@
+.header {
+   padding-top: 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   &__list {
+      width: 540px;
+   }
+
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__list-item {
+      list-style-type: none;
+      a{
+         font-size: 13px;
+         text-decoration: none;
+         font-weight: 700;
+         text-transform: uppercase;
+         color: #ffffff;
+      }
+   }
+   &__list-item:hover {
+
+      a{
+         color: $main-color; 
+      }
+   }
+
+}
+.logo {
+}
+.btn {
+}

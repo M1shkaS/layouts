@@ -28,7 +28,6 @@
       content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-   <link href="css/toast.min.css" rel="stylesheet">
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -103,9 +102,8 @@
          <div class="about__row">
             <div class="about__photo">
                <picture>
-                  <source media="(max-width: 576px)" srcset="img/Photo-mini.jpg">
-                  <source media="(min-width: 577px)" srcset="img/main_photo.jpg">
-                  <img src="img/main_photo.jpg" alt="me" class="about__photo">
+                  <source media="(min-width: 577px)" srcset="img/me.jpg">
+                  <img src="img/me.jpg" alt="me" class="about__photo">
                </picture>
 
             </div>
@@ -114,7 +112,7 @@
                <h2 class="about__subtitle subtitle">Про меня</h2>
                <div class="about__title title">Меня зовут Михаил</div>
                <div class="about__divider divider"></div>
-               <p class="about__decr">Я родился в хабаровске, вырос и получил образование в Омске. Окончил хорошую,
+               <p class="about__decr">Я родился в Хабаровске, вырос и получил образование в Омске. Окончил хорошую,
                   среднюю общеобразовательную гимназию № 43 с углубленным изучением математики. Меня интересовали
                   точные науки: информатика и математика. Первый компьютер в моей жизни появился, когда я был уже классе
                   в
@@ -396,14 +394,14 @@
             </a>
             <a target="_blank" href="https://github.com/M1shkaS/Udemy/tree/master/ivan/Food"
                class="portfolio__item vertical">
-               <img src="img/works/mac.jpg" alt="plans">
+               <img src="img/works/portf.jpg" alt="me">
             </a>
             <a target="_blank" href="https://github.com/M1shkaS/Udemy/tree/master/ivan/Food" class="portfolio__item">
-               <img src="img/works/food.jpg" alt="plans">
+               <img src="img/works/food.jpg" alt="food">
             </a>
             <a target="_blank" href="https://github.com/M1shkaS/Udemy/tree/master/ivan/project"
                class="portfolio__item horizon">
-               <img src="img/works/mars.jpg" alt="mac">
+               <img src="img/works/mars.jpg" alt="mars">
             </a>
          </div>
       </div>
@@ -413,7 +411,7 @@
       <div class="container">
          <div class="contacts__wrapper">
             <div class="contacts__photo">
-               <img src="img/main_photo.jpg" alt="photo">
+               <img src="img/me.jpg" alt="photo">
             </div>
             <div class="contacts__descr">
                <h2 class="contacts__subtitle subtitle">Контакты</h2>
@@ -435,7 +433,7 @@
                <div class="contacts__text">Или оставьте ваши данные и я сам вам напишу:</div>
                <form action="#" class="contacts__form">
                   <div class="contacts__input">
-                     <input id='name' name="name" type="name">
+                     <input id='name' name="name" type="text">
                      <label for="name">Ваше имя</label>
                   </div>
                   <div class="contacts__input">
@@ -450,11 +448,10 @@
                      <button class="contacts__btn button" type="submit">Отправить сообщение</button>
                      <div class="contacts__policy">
                         <input required type="checkbox">
-                        <span>Я согласен(а) с <a target="_blank" href="/policy.html">политикой конфиденциальности</a>
+                        <span>Я согласен(а) с <a target="_blank" href="./policy.html">политикой конфиденциальности</a>
                         </span>
                      </div>
                   </div>
-
                </form>
             </div>
          </div>

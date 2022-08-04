@@ -1,6 +1,6 @@
 .promo {
    min-height: 100vh;
-   background: url('../img/main_bg.jpg') no-repeat 50%/cover;
+   background: url('../img/main.jpg') no-repeat 70%/cover;
    // background-color: #101010;
    &__content{
       position: absolute;
@@ -22,7 +22,6 @@
       span{
          color:$second-color;;
       }
-
    }
 
    &__descr {
