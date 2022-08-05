@@ -1,0 +1,66 @@
+.solutions {
+   padding: 80px 0 60px 0;
+   background: url('../img/solutions/solutions_bg.jpg') center center / cover no-repeat;
+   min-height: 890px;
+
+}
+
+.carousel {
+   margin-top: 25px;
+		&__inner {
+         margin-top: 35px;
+         text-align: center;
+     
+		}
+      &__wrapper{
+         position: relative;
+      }
+}
+.nav-carousel {
+   list-style-type: none;
+   display: flex;
+   border: 1px solid #ffffff;
+   padding: 7px 0;
+
+   justify-content: space-between;
+   align-items: center;
+   width: 845px;
+   margin: 0 auto;
+ 
+}
+.nav-carousel-tab {
+   font-size: 14px;
+   line-height: 25px;
+   font-weight: 400;
+   color: #ffffff;
+   border-right: 1px solid grey;
+   cursor: pointer;
+   width: 20%;
+   padding: 15px 0;
+   transition: all .5s;
+   text-align: center;
+}
+.nav-carousel-tab:hover {
+   color: $main-color;
+   font-weight: 700;
+}
+.nav-carousel-tab:last-child {
+   border-right: none;
+}
+.prev, .next{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+.prev{
+   left: 50px;
+}
+.next{
+   right:50px ;
+}
+.tns-nav-active{
+   color: $main-color;
+}

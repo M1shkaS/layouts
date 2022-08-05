@@ -13,6 +13,15 @@
 .container{
    width: 1140px;
    margin: 0 auto;
+
+}
+
+.title{
+   font-size: 30px;
+   line-height: 35px;
+   font-weight: 900;
+   color: #ffffff;
+   text-align: center;
 }
 
 @import 'blocks/hat/hat';
@@ -20,3 +29,5 @@
 @import 'blocks/buttons/buttons';
 @import 'blocks/promo/promo';
 @import 'blocks/cards/cards';
+@import 'blocks/solutions/solutions';
+@import 'blocks/benefits/benefits';
