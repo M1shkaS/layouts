@@ -1,0 +1,74 @@
+.data {
+   position: relative;
+   &__title {
+      color: #ffffff;
+      position: absolute;
+      left: 50%;
+      top: 79px;
+      transform: translateX(-50%);
+      z-index: 5;
+   }
+
+   &__wrapper {
+      display: grid;
+      grid-template-rows: 580px;
+      grid-template-columns: 1fr 1fr;
+   }
+
+   &__block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+   }
+
+   &__block-body {
+      width: 485px;
+     
+      span{
+         display: block;
+         position: absolute;
+         top:50%;
+         transform: translateY(-50%);
+         width: 167px;
+         height: 167px;
+         background-color:rgba(0%, 76%, 94%, 0.3);;
+      }
+   }
+
+   &__block-title {
+      font-size: 30px;
+      position: relative;
+      z-index: 5;
+      line-height: 22px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #ffffff;
+   }
+
+   &__block-descr {
+      position: relative;
+      z-index: 5;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 300;
+      color: #ffffff;
+      margin-top: 20px;
+   }
+}
+.block-right{
+   background: url('../img/data-sect/computer_bg.jpg') center center/cover no-repeat;
+  text-align-last: left;
+  padding-left: 82px;
+  align-items: start;
+
+}
+.block-left{
+   background: url('../img/data-sect/lock_bg.jpg') center center/cover no-repeat;
+   text-align-last: right;
+   padding-right: 82px;
+   align-items: end;
+   span{
+      right: 82px;
+   }
+}

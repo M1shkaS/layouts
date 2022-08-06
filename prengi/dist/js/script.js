@@ -4,9 +4,9 @@ window.addEventListener('DOMContentLoaded', () => {
       items: 1,
       slideBy: 'page',
       speed: 500,
-      autoplay: false,
+      autoplay: true,
       controls: false,
-      // nav: false,
+      autoplayButtonOutput: false,
       navContainer: '.nav-carousel',
       navAsThumbnails: true
    });
@@ -19,22 +19,5 @@ window.addEventListener('DOMContentLoaded', () => {
       slider.goTo('next');
    });
 
-   // const carouselTabs = document.querySelectorAll('.nav-carousel-tab');
-   // const carouselItems = document.querySelectorAll('.tns-item');
 
-   // carouselTabs.forEach(tab => {
-   //    tab.addEventListener('click', (e) => {
-   //       const target = e.target;
-
-   //       carouselTabs.forEach((item, idx) => {
-   //          if (item == target) {
-   //             carouselItems.forEach(slide => {
-   //                slide.classList.remove('tns-slide-active')
-   //             })
-   //             carouselItems[idx].classList.add('.tns-slide-active')
-   //          }
-   //       })
-
-   //    })
-   // })
 })
