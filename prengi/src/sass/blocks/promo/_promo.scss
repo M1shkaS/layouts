@@ -1,9 +1,11 @@
 .promo {
    min-height: 700px;
    background: url('../img/main_bg.jpg') center center/cover no-repeat;
-   position: relative;
+
    overflow: hidden;
    .container{
+      min-height: 700px;
+      position: relative;
 
    }
    &__wrapper {
@@ -37,7 +39,7 @@
    &__slider {
 
       position: absolute;
-      right:381px;
+      right:0;
       bottom: -14px;
    }
 

@@ -1,0 +1,44 @@
+
+@media(max-width:1200px){
+   .hat__item-location{
+      font-size: 10px;
+   }
+}
+
+@media(max-width:992px){
+.hat__item{
+   margin-right: 5px;
+
+   &-phone{
+      font-size: 10px;
+   }
+   img{
+      width: 20px;
+   }
+}
+   .hat__item:last-child{
+      margin-right:0px;
+   }
+}
+
+@media(max-width:768px){    
+   .hat__item{
+      flex-direction: column;
+      align-items: center;
+      margin-right:0px;
+      &-title{
+         font-size: 12px;
+      }&-body{
+         margin-top: 5px;
+         text-align: center;
+      }
+      img{
+         width: 16px;
+      }
+   }
+}
+@media(max-width:576px){
+.hat{
+      display: none;
+   }
+}
