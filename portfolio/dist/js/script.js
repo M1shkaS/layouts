@@ -79,6 +79,11 @@ window.addEventListener('DOMContentLoaded', () => {
          body: data,
          headers: { 'Content-type': 'application/json' }
       });
+
+      if (!res.ok) {
+         throw new Error(`Couldn't fetch ${url}, status: ${res.status}`);
+      }
+
       return await res.text();
    }
 
@@ -86,16 +91,21 @@ window.addEventListener('DOMContentLoaded', () => {
       form.addEventListener('submit', event => {
          event.preventDefault();
 
-         const load = new Toast({
+         new Toast({
             title: 'Подождите',
             text: 'Сообщение отправляется',
             theme: 'warning',
             autohide: true,
             interval: 2000
          });
+
          const formData = new FormData(form);
+         const toastWarning = document.querySelector('.toast_warning');
+
          postData('../dist/mailer/smart.php', JSON.stringify(Object.fromEntries(formData.entries())))
             .then(data => {
+               toastWarning.remove();
+
                new Toast({
                   title: 'Отлично',
                   text: 'Сообщение отправлено',
@@ -104,8 +114,9 @@ window.addEventListener('DOMContentLoaded', () => {
                   interval: 5000
                });
             })
-
             .catch((error) => {
+
+               toastWarning.remove();
                console.log(error);
                new Toast({
                   title: 'Ошибка',

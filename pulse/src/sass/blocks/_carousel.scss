@@ -1,0 +1,46 @@
+.carousel {
+   padding: 82px 0;
+   .tns-outer {
+      width: 750px;
+      margin: 0 auto;
+      position: relative;
+      img {
+         width: 100%;
+      }
+   }
+   .prev,
+   .next {
+      border: none;
+      background-color: #ffff;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -10px;
+      img {
+         width: 30px;
+         height: 50px;
+      }
+   }
+   .next {
+      left: auto;
+      right: -10px;
+   }
+   [data-controls="next"],
+   [data-controls="prev"] {
+      display: none;
+   }
+   .tns-nav {
+      text-align: center;
+      button {
+         margin: 0 5px;
+         width: 15px;
+         height: 15px;
+         border-radius: 50%;
+         border: none;
+         background-color: rgb(2, 2, 2);
+      }
+      .tns-nav-active {
+         background-color: $main-color;
+      }
+   }
+}
