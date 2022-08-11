@@ -1,0 +1,9 @@
+@import 'base/variables';
+@import 'base/mixins';
+
+.container{
+   width: 1140px;
+   margin: 0 auto;
+}
+
+@import 'blocks/media';
